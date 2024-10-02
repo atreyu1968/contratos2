@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Desafío de los Contratos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>El Desafío de los Contratos</h1>
+    <div id="mode-selection">
+        <h2>Selecciona un modo de juego</h2>
+        <button onclick="startGame('practica')">Modo Práctica</button>
+        <button onclick="startGame('examen')">Modo Examen</button>
+    </div>
+    <div id="game-container" style="display: none;">
+        <div id="score">Puntuación: 0</div>
+        <div id="timer">Tiempo restante: 30s</div>
+        <div id="scenario">
+            <h2 id="scenario-title">Escenario</h2>
+            <p id="scenario-description"></p>
+        </div>
+        <div id="options">
+            <h3>Elige el contrato adecuado:</h3>
+            <ul id="options-list">
+                <!-- Opciones generadas dinámicamente -->
+            </ul>
+        </div>
+        <div id="feedback">
+            <!-- Retroalimentación después de seleccionar una opción -->
+        </div>
+        <button id="hint-button" onclick="showHint()">Mostrar Pista</button>
+        <button id="next-button" onclick="nextScenario()">Siguiente Escenario</button>
+    </div>
+    <div id="end-game" style="display: none;">
+        <h2>¡Has completado todos los escenarios!</h2>
+        <p>Puntuación final: <span id="final-score"></span></p>
+        <input type="text" id="player-name" placeholder="Ingresa tu nombre">
+        <button onclick="saveScore()">Guardar Puntaje</button>
+        <h3>Tabla de Clasificación:</h3>
+        <ul id="leaderboard"></ul>
+    </div>
+    <audio id="correct-sound" src="sonidos/correcto.mp3"></audio>
+    <audio id="incorrect-sound" src="sonidos/incorrecto.mp3"></audio>
+    <!-- Asegúrate de que el script se carga al final del body -->
+    <script src="script.js"></script>
+</body>
+</html>
+

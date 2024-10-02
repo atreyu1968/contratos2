@@ -1,0 +1,128 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#game-container, #end-game, #mode-selection {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#scenario-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#scenario-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#options-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#options-list li {
+    margin-bottom: 15px;
+}
+
+#options-list button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 2px solid #4facfe;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#options-list button:hover {
+    background-color: #4facfe;
+    color: #fff;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#next-button, #hint-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #00f2fe;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+#next-button:hover, #hint-button:hover {
+    background-color: #4facfe;
+}
+
+#next-button {
+    display: none;
+}
+
+#score, #timer {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#timer {
+    color: #ff4d4d;
+}
+
+.correct-answer {
+    animation: correctAnimation 1s;
+}
+
+.incorrect-answer {
+    animation: incorrectAnimation 1s;
+}
+
+@keyframes correctAnimation {
+    0% { background-color: #fff; }
+    50% { background-color: #c8e6c9; }
+    100% { background-color: #fff; }
+}
+
+@keyframes incorrectAnimation {
+    0% { background-color: #fff; }
+    50% { background-color: #ffcdd2; }
+    100% { background-color: #fff; }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #game-container, #end-game, #mode-selection {
+        padding: 20px;
+    }
+
+    #options-list button {
+        font-size: 14px;
+    }
+}
