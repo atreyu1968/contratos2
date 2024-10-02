@@ -394,7 +394,56 @@ function showLeaderboard() {
 }
 
 function showHint() {
-    const scenario = scenarios[currentScenario];
+    const scenario = scenarios[currentScenario
+    {
+        "title": "Escenario 41",
+        "description": "Una peque\u00f1a empresa de construcci\u00f3n necesita contratar personal para un proyecto espec\u00edfico que durar\u00e1 aproximadamente 8 meses. \u00bfQu\u00e9 tipo de contrato es el m\u00e1s adecuado?",
+        "options": [
+            {
+                "text": "Contrato temporal por obra o servicio",
+                "correct": true
+            },
+            {
+                "text": "Contrato indefinido",
+                "correct": false
+            },
+            {
+                "text": "Contrato de interinidad",
+                "correct": false
+            },
+            {
+                "text": "Contrato de formaci\u00f3n y aprendizaje",
+                "correct": false
+            }
+        ],
+        "feedback": "El contrato temporal por obra o servicio es adecuado para cubrir necesidades de trabajo relacionadas con proyectos espec\u00edficos y de duraci\u00f3n limitada. Aunque proporciona flexibilidad, no ofrece la estabilidad de un contrato indefinido.",
+        "hint": "Piensa en un contrato adecuado para trabajos temporales que duran lo que dura una obra."
+    },
+    {
+        "title": "Escenario 42",
+        "description": "Una empresa del sector tur\u00edstico en Canarias necesita contratar a trabajadores adicionales para cubrir la temporada alta durante 3 meses. \u00bfQu\u00e9 contrato deben ofrecer?",
+        "options": [
+            {
+                "text": "Contrato fijo-discontinuo",
+                "correct": true
+            },
+            {
+                "text": "Contrato indefinido",
+                "correct": false
+            },
+            {
+                "text": "Contrato temporal por obra o servicio",
+                "correct": false
+            },
+            {
+                "text": "Contrato en pr\u00e1cticas",
+                "correct": false
+            }
+        ],
+        "feedback": "El contrato fijo-discontinuo es el m\u00e1s adecuado para cubrir necesidades de trabajo que se repiten en el tiempo, como en las temporadas tur\u00edsticas. Ofrece una relaci\u00f3n laboral continua, pero con periodos de inactividad.",
+        "hint": "Considera un contrato que sea \u00fatil para trabajos de temporada."
+    }
+];
     if (scenario.hint) {
         document.getElementById('feedback').innerText = 'Pista: ' + scenario.hint;
         document.getElementById('hint-button').disabled = true;
